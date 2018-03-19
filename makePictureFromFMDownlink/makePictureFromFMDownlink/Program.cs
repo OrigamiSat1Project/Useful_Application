@@ -41,17 +41,18 @@ namespace makePictureFromFMDownlink
                 if (pk != pk_already_get)
                 {
                     lines++;
-                    int index_last = pk.Length - 1;
-                    if (pk.Substring(index_last, 1) == "\n")
-                    {
-                        pk.Remove(index_last, 1);
-                    }
-                    index_last = pk.Length - 1;
-                    if (pk.Substring(index_last, 1) == "\r")
-                    {
-                        pk.Remove(index_last, 1);
-                    }
-                    edited_data += pk;
+                    string edited_line = pk.Substring(0, pk.Length - 2);
+                    //int index_last = pk.Length - 1;
+                    //if (pk.Substring(index_last, 1) == "\n")
+                    //{
+                    //    pk.Remove(index_last, 1);
+                    //}
+                    //index_last = pk.Length - 1;
+                    //if (pk.Substring(index_last, 1) == "\r")
+                    //{
+                    //    pk.Remove(index_last, 1);
+                    //}
+                    edited_data += edited_line;
                     Show(lines + " lines already added.");
                 }
                 pk_already_get = pk;
