@@ -19,7 +19,6 @@
 *.settings
 *.pdb
 *.manifest
-*.exe
 *.cache
 *.resources
 *.Cache
